@@ -305,7 +305,7 @@ PODS:
     - React-Core (= 0.63.4)
     - React-cxxreact (= 0.63.4)
     - React-jsi (= 0.63.4)
-  - vgs-show-react-native (0.1.0):
+  - vgs-show-react-native (0.1.2):
     - React-Core
     - VGSShowSDK
   - VGSShowSDK (1.0.4):
@@ -474,11 +474,11 @@ SPEC CHECKSUMS:
   React-RCTText: 5c51df3f08cb9dedc6e790161195d12bac06101c
   React-RCTVibration: ae4f914cfe8de7d4de95ae1ea6cc8f6315d73d9d
   ReactCommon: 73d79c7039f473b76db6ff7c6b159c478acbbb3b
-  vgs-show-react-native: 6a2bc9ccc1acc7411f1a8a8e3034b839e22fb21e
+  vgs-show-react-native: feaef73c7c6561b2e4a2dff2cc7b22174422ea19
   VGSShowSDK: 82d8c1c1d1e3cf32c81b26057f7e7aaa20f91cfc
   Yoga: 4bd86afe9883422a7c4028c00e34790f560923d6
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
 PODFILE CHECKSUM: 22d1aef0643c7abb6f0d30de17ef3ea0b598764c
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.10.2

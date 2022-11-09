@@ -21,4 +21,6 @@ RCT_EXTERN_METHOD(revealData:(nonnull NSNumber *)node path:(nonnull NSString *)p
           resolver:(RCTPromiseResolveBlock)resolve
           rejecter:(RCTPromiseRejectBlock)reject)
 
+RCT_EXTERN_METHOD(copyToClipboard:(nonnull NSNumber *)node)
+
 @end

@@ -17,6 +17,15 @@ class VgsShowReactNativeViewManager: RCTViewManager {
             component.revealData(path: path, method: method, payload: payload, resolve: resolve, reject: reject)
         }
     }
+
+    @objc(copyToClipboard) func copyToClipboard(_ node: NSNumber) {
+        DispatchQueue.main.async {
+            let component = self.bridge.uiManager.view(
+                forReactTag: node
+            ) as! VgsShowReactNativeView
+            component.copyToClipboard()
+        }
+    }
 }
 
 class VgsShowReactNativeView : UIView, VGSLabelDelegate {
@@ -169,6 +178,13 @@ class VgsShowReactNativeView : UIView, VGSLabelDelegate {
                 reject("error", error?.localizedDescription, error)
             }
         }
+    }
+
+    @objc func copyToClipboard() {
+        if (attributeLabel == nil) {
+            return;
+        }
+        attributeLabel.copyTextToClipboard(format: .raw)
     }
     
     func hexStringToUIColor (hex:String) -> UIColor {
