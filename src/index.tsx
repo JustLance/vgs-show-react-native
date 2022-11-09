@@ -36,6 +36,10 @@ export type VgsShowReactNativeProps = {
     environment: 'live' | 'sandbox';
     customHeaders?: Record<string, any>;
   };
+  format?: {
+    pattern: string;
+    template: string;
+  };
 };
 
 const NATIVE_COMP_IDENTIFIER = 'VgsShowReactNativeView';

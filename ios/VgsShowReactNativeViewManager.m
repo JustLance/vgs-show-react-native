@@ -17,6 +17,8 @@ RCT_EXPORT_VIEW_PROPERTY(fontSize, CGFloat)
 // Functionality
 RCT_EXPORT_VIEW_PROPERTY(initParams, NSDictionary)
 
+RCT_EXPORT_VIEW_PROPERTY(format, NSDictionary)
+
 RCT_EXTERN_METHOD(revealData:(nonnull NSNumber *)node path:(nonnull NSString *)path method:(NSString *)method payload:(NSDictionary *)payload
           resolver:(RCTPromiseResolveBlock)resolve
           rejecter:(RCTPromiseRejectBlock)reject)

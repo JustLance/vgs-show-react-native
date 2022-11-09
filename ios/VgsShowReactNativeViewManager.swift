@@ -44,6 +44,17 @@ class VgsShowReactNativeView : UIView, VGSLabelDelegate {
             }
         }
     }
+
+    @objc var format: NSDictionary = NSDictionary() {
+        didSet {
+            if let pattern = format["pattern"] as? String {
+                if let template = format["template"] as? String{
+                    let regex = try! NSRegularExpression(pattern: pattern, options: [])
+                    attributeLabel.addTransformationRegex(regex, template: template)
+                }
+            }
+        }
+    }
     
     @objc var textColor: String = "" {
         didSet {
