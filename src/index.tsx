@@ -100,6 +100,23 @@ export class VgsShowAttribute extends React.Component<VgsShowReactNativeProps> {
     return Promise.reject('No ref available for native comp!');
   }
 
+  copyToClipboard(): void {
+    const handle = findNodeHandle(this._nativeRef);
+    const copy = Platform.select({
+      ios: () => {
+        NativeModules.VgsShowReactNativeViewManager.copyToClipboard(handle);
+      },
+      android: () => {
+        UIManager.dispatchViewManagerCommand(
+          handle,
+          'copyToClipboard' as any,
+          []
+        );
+      },
+    });
+    copy?.();
+  }
+
   render() {
     return (
       <VgsShowAttributeNative
